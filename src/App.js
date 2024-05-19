@@ -5,6 +5,8 @@ import Post from './components/Post';
 import BottomNavbar from './components/BottomNavbar';
 
 const App = () => {
+
+  const theme = 'dark';
   const posts = [
     {
       id: 1,
@@ -40,8 +42,8 @@ const App = () => {
   ];
 
   return (
-    <div className="d-flex" data-bs-theme="dark">
-      <Sidebar />
+    <div className="d-flex" data-bs-theme={theme}>
+      <Sidebar theme={theme}/>
       <div className="container mt-4">
         <div className="posts d-flex flex-column gap-3">
           {posts.map(post => (
@@ -49,7 +51,7 @@ const App = () => {
           ))}
         </div>
       </div>
-      <BottomNavbar />
+      <BottomNavbar theme={theme}/>
     </div>
   );
 };
