@@ -23,8 +23,8 @@ const router = createBrowserRouter(
         <Route index element={<App theme={theme} />} />
         <Route path="messages" element={<Messages theme={theme} />} />
         <Route path="chats" element={<MessageList theme={theme} />} />
-        <Route path="chat" element={<MessageSpace theme={theme} />} />
       </Route>
+      <Route path="chat" element={<MessageSpace theme={theme} />} />
     </Route>
   )
 );
