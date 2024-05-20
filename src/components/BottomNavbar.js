@@ -7,7 +7,7 @@ const BottomNavbar = ({ theme }) => {
         <Link to={""} className="text-decoration-none nav-link text-light">
             <i className="bi bi-house"></i>
         </Link>
-        <Link to={"messages"} className="text-decoration-none nav-link text-light">
+        <Link to={"chats"} className="text-decoration-none nav-link text-light">
             <i className="bi bi-envelope"></i>
         </Link>
         <a className="nav-link text-light" href="#account">

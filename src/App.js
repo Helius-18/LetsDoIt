@@ -38,7 +38,7 @@ const App = ({ theme }) => {
   ];
 
   return (
-    <div className="posts d-flex flex-column gap-3">
+    <div className="posts m-md-5 d-flex flex-column gap-3 mb-5">
       {posts.map(post => (
         <Post key={post.id} {...post} />
       ))}

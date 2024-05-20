@@ -14,12 +14,12 @@ const Sidebar = ({ theme }) => {
                 <h5>Lets Make It</h5>
               </div>
               <div className="flex-shrink-0 d-flex flex-column gap-3">
-                <Link className='text-decoration-none' to={""}>
+                <Link className='text-decoration-none link-light' to={""}>
                   <li className={`list-group-item bg-${theme} list-group-item-action`}>
                     <i className="bi bi-house"></i> Home
                   </li>
                 </Link>
-                <Link className='text-decoration-none' to={"messages"}>
+                <Link className='text-decoration-none link-light' to={"messages"}>
                   <li className={`list-group-item bg-${theme} list-group-item-action`}>
                     <i className="bi bi-envelope"></i> Messages
                   </li>
@@ -40,7 +40,7 @@ const Sidebar = ({ theme }) => {
           </div>
         </div>
       </div>
-      <div className="container mt-4">
+      <div className="w-100">
         <Outlet />
       </div>
       <BottomNavbar theme={theme} />
