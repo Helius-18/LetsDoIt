@@ -8,13 +8,19 @@ import {
 } from "react-router-dom";
 import App from './App';
 import Login from './components/Login';
+import Messages from './components/Messages';
+import Sidebar from './components/Sidebar';
+
+const theme = 'dark';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route index element={<Login />} />
-      <Route path="dashboard" element={<App />} />
-      {/* ... etc. */}
+      <Route path="dashboard" element={<Sidebar theme={theme} />}>
+        <Route index element={<App theme={theme} />} />
+        <Route path="messages" element={<Messages theme={theme} />} />
+      </Route>
     </Route>
   )
 );
