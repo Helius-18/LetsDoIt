@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 
 const Post = ({ title, subtitle, text, comments, images, id }) => {
   return (
-    <div className="post">
+    <div className="post col-md-5 col-12">
       <div className="card p-3">
         <div className="card-body">
           <h5 className="card-title">{title}</h5>

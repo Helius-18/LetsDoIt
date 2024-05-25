@@ -105,7 +105,7 @@ const MessageSpace = ({ theme }) => {
                         hi, this is test message
                     </div>
             </div>
-            <div className="p-2">
+            <div className="p-2 sticky-sm-bottom">
                 <div className="input-group">
                     <input type="text" placeholder='Type a message' className="form-control p-3" aria-label="message" />
                     <span className="input-group-text"><i className="bi bi-send px-2"></i></span>

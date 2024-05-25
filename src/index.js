@@ -12,6 +12,8 @@ import Messages from './components/Messages';
 import Sidebar from './components/Sidebar';
 import MessageList from './components/MessageList';
 import MessageSpace from './components/MessageSpace';
+import Settings from './components/Settings';
+import Account from './components/Account';
 
 const theme = 'dark';
 
@@ -23,6 +25,8 @@ const router = createBrowserRouter(
         <Route index element={<App theme={theme} />} />
         <Route path="messages" element={<Messages theme={theme} />} />
         <Route path="chats" element={<MessageList theme={theme} />} />
+        <Route path="settings" element={<Settings theme={theme} />} />
+        <Route path="account" element={<Account theme={theme} />} />
       </Route>
       <Route path="chat" element={<MessageSpace theme={theme} />} />
     </Route>
