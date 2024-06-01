@@ -49,7 +49,7 @@ const Sidebar = ({ theme }) => {
                 </div>
               </div>
             </Link>
-            <Link to={"/chat"} className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+            <Link className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
               <div className="d-flex flex-column">
                 <div className="header d-flex gap-2 align-items-center">
                   <i className="bi bi-gem"></i> About
