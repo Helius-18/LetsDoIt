@@ -6,7 +6,7 @@ import { Link, Outlet } from 'react-router-dom';
 const Sidebar = ({ theme }) => {
   return (
     <div className={`d-flex text-bg-${theme}`} data-bs-theme={theme}>
-      <div className={`text-bg-${theme} text-bg-${theme} position-sticky top-0 border-end`} style={{ height: '100vh', width: '250px' }}>
+      <div className={`text-bg-${theme} text-bg-${theme} d-none d-md-block position-sticky top-0 border-end`} style={{ height: '100vh', width: '250px' }}>
         <div className="d-flex flex-column mb-3 h-100">
 
           <div className="header">
