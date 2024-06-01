@@ -1,24 +1,86 @@
 import React from 'react'
 
-const Settings = ({theme}) => {
+const Settings = ({ theme }) => {
   return (
-    <div className={`d-flex flex-column align-items-center text-bg-dark`} style={{ height : '100vh'}}>
-        <div className='user-profile d-flex mt-4 p-2 col-10'>
-            <div className="profile">
-                <div className="user-img rounded-circle bg-light" style={{ width: '7vh', height: '7vh' }}></div>
-            </div>
-            <div className="username ms-4">
+    <div className="container mt-5 d-flex flex-column gap-2" style={{ height: '100vh' }}>
+      <div className="d-flex bg-body-secondary rounded p-4">
+        <div className="d-flex w-100 align-items-center justify-content-between">
+          <div className="d-flex align-items-center gap-3">
+            
+            <div className="user-img rounded-circle bg-light shadow-lg p-3 bg-body-tertiary rounded" style={{ width: '7vh', height: '7vh' }}></div>
+            
+            <div className="d-flex flex-column">
+              <div className="header">
                 <h4>Helius</h4>
-                <button className='btn btn-sm btn-outline-secondary'>Edit profile</button>
-            </div>
-        </div>
-        <div className='settings col-10 mt-3'>
-            <div className="list-group">
-                <button type="button" className="list-group-item list-group-item-action">A second button item</button>
-                <button type="button" className="list-group-item list-group-item-action">A third button item</button>
-                <button type="button" className="list-group-item list-group-item-action">A fourth button item</button>
               </div>
+              <div className="subheader text-body-secondary">
+                @Helius0_0
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" className="btn btn-outline-secondary">Edit Profile</button>
+          </div>
+
         </div>
+      </div>
+
+      <div className="bg-body-secondary rounded p-4">
+
+        <div className="d-flex flex-column">
+          <div className="header">
+            <h5>Settings</h5>
+          </div>
+          <div className="subheader text-body-secondary">
+            Customize your account preferences.
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="d-flex flex-wrap justify-content-between gap-5 p-3">
+
+          <div className="d-flex gap-1 flex-column">
+            <div className="setting-header">
+              <h5>Notifications</h5>
+            </div>
+            <div className="setting-subheader text-body-secondary">
+              Manage your notification preferences.
+            </div>
+            <div className="form-check form-switch ms-2 mt-2 d-flex flex-no-wrap gap-3 align-items-center">
+              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style={{ transform: 'scale(1.3)' }} />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Email Notifications</label>
+            </div>
+          </div>
+
+          <div className="d-flex gap-1 flex-column">
+            <div className="setting-header">
+              <h5>Privacy</h5>
+            </div>
+            <div className="setting-subheader text-body-secondary">
+              Control your privacy settings.
+            </div>
+            <div className="form-check form-switch ms-2 mt-2 d-flex flex-no-wrap gap-3 align-items-center">
+              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style={{ transform: 'scale(1.3)' }} />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Public Profile</label>
+            </div>
+          </div>
+
+          <div className="d-flex gap-1 flex-column">
+            <div className="setting-header">
+              <h5>Account</h5>
+            </div>
+            <div className="setting-subheader text-body-secondary">
+              Manage your account settings.
+            </div>
+            <div>
+              <button type="button" className="btn btn-outline-secondary">Change Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
