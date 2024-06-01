@@ -2,7 +2,7 @@ import React from 'react'
 
 const Settings = ({ theme }) => {
   return (
-    <div className="container mt-5 d-flex flex-column gap-2" style={{ height: '100vh' }}>
+    <div className="container pt-3  d-flex flex-column gap-2" style={{ height: '100vh' }}>
       <div className="d-flex bg-body-secondary rounded p-4">
         <div className="d-flex w-100 align-items-center justify-content-between">
           <div className="d-flex align-items-center gap-3">
