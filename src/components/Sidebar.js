@@ -5,44 +5,60 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Sidebar = ({ theme }) => {
   return (
-    <div className="d-flex" data-bs-theme={theme}>
-      <div className={`text-bg-${theme} position-sticky top-0 d-none d-md-block border-end`} style={{ height: '100vh', width: '250px' }}>
-        <div className="container h-100">
-          <div className="pt-3 h-100">
-            <div className="d-flex flex-column h-100 gap-3">
-              <div>
+    <div className={`d-flex text-bg-${theme}`} data-bs-theme={theme}>
+      <div className={`text-bg-${theme} text-bg-${theme} d-none d-md-block position-sticky top-0 border-end`} style={{ height: '100vh', width: '250px' }}>
+        <div className="d-flex flex-column mb-3 h-100">
+
+          <div className="header">
+            <div className="d-flex justify-content-between p-3 align-items-center">
+              <div className="header">
                 <h5>Lets Make It</h5>
-              </div>
-              <div className="flex-shrink-0 d-flex flex-column gap-3">
-                <Link className='text-decoration-none link-light' to={""}>
-                  <li className={`list-group-item bg-${theme} list-group-item-action`}>
-                    <i className="bi bi-house"></i> Home
-                  </li>
-                </Link>
-                <Link className='text-decoration-none link-light' to={"messages"}>
-                  <li className={`list-group-item bg-${theme} list-group-item-action`}>
-                    <i className="bi bi-envelope"></i> Messages
-                  </li>
-                </Link>
-                <Link className='text-decoration-none link-light' to={"settings"}>
-                  <li className={`list-group-item bg-${theme} list-group-item-action`}>
-                    <i className="bi bi-gear"></i> Settings
-                  </li>
-                </Link>
-              </div>
-              <div className="mt-auto mb-3 d-flex flex-column gap-3">
-                <Link className='text-decoration-none link-light' to={"account"}>
-                  <li className={`list-group-item bg-${theme} list-group-item-action`}>
-                    <i className="bi bi-person"></i> Account
-                  </li>
-                </Link>
-                <li className={`list-group-item bg-${theme} list-group-item-action`}>
-                  <i className="bi bi-gem"></i> About
-                </li>
               </div>
             </div>
           </div>
+
+          <div className="d-flex p-2 flex-column">
+            <Link to={""} className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+              <div className="d-flex flex-column">
+                <div className="header d-flex gap-2 align-items-center">
+                  <i className="bi bi-house"></i> Home
+                </div>
+              </div>
+            </Link>
+            <Link to={"messages"} className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+              <div className="d-flex flex-column">
+                <div className="header d-flex gap-2 align-items-center">
+                  <i className="bi bi-envelope"></i> Messages
+                </div>
+              </div>
+            </Link>
+            <Link to={"settings"} className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+              <div className="d-flex flex-column">
+                <div className="header d-flex gap-2 align-items-center">
+                  <i className="bi bi-gear"></i> Settings
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="mt-auto d-flex p-2 flex-column">
+            <Link to={"account"} className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+              <div className="d-flex flex-column">
+                <div className="header d-flex gap-2 align-items-center">
+                  <i className="bi bi-person"></i> Account
+                </div>
+              </div>
+            </Link>
+            <Link className="menu-item hover-item w-100 p-2 link-light rounded text-decoration-none">
+              <div className="d-flex flex-column">
+                <div className="header d-flex gap-2 align-items-center">
+                  <i className="bi bi-gem"></i> About
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
+        
       </div>
       <div className="w-100">
         <Outlet />

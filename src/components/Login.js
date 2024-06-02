@@ -18,7 +18,7 @@ const Login = () => {
       (<Navigate to="/dashboard" replace={true} />)
       :
       (<div style={{ 'height': '100vh' }}>
-        <div className="h-100 d-flex align-items-center justify-content-center row">
+        <div className="h-100 d-flex align-items-center justify-content-center">
           <div className="col-11 col-md-2">
             <div className='mb-3'>
               <h4>Lets Do It</h4>
@@ -32,7 +32,7 @@ const Login = () => {
               <div>
                 <div className="mb-3">
                   <label htmlFor="inputotp" className="form-label">Enter OTP</label>
-                  <input type="password" id="inputotp" className="form-control" />
+                  <input type="password" id="inputotp" className="form-control" placeholder='Enter OTP'/>
                 </div>
                 <div className="mb-3 d-flex gap-2">
                   <button type="button" className="btn btn-primary" onClick={verifyOtp}>Verify</button>
