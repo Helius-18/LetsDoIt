@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../AppContext';
 
-const MessageList = ({ theme }) => {
+const MessageList = () => {
+    const { theme} = useContext(AppContext);
+
     return (
         <div className={`col-12 col-md-4 text-bg-${theme} border-end`} style={{ height: '100vh' }}>
             <div className="header">

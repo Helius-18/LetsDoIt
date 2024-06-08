@@ -1,9 +1,12 @@
 // Sidebar.js
-import React from 'react';
+import React, { useContext } from 'react';
 import BottomNavbar from './BottomNavbar';
 import { Link, Outlet } from 'react-router-dom';
+import { AppContext } from '../../AppContext';
 
-const Sidebar = ({ theme }) => {
+const Sidebar = () => {
+  const {theme} = useContext(AppContext);
+
   return (
     <div className={`d-flex text-bg-${theme}`} data-bs-theme={theme}>
       <div className={`text-bg-${theme} text-bg-${theme} d-none d-md-block position-sticky top-0 border-end`} style={{ height: '100vh', width: '250px' }}>

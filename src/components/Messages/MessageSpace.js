@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../AppContext';
 
-const MessageSpace = ({ theme }) => {
+const MessageSpace = () => {
+    const {theme} = useContext(AppContext);
+
     return (
         <div className={`w-100 text-bg-${theme} position-relative`} data-bs-theme={theme}>
             <div className="w-100 d-flex align-items-start flex-column" style={{ height: '100vh' }}>

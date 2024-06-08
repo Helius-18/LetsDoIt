@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../AppContext';
 
-const BottomNavbar = ({ theme }) => {
+const BottomNavbar = () => {
+  const {theme} = useContext(AppContext);
+
   return (
     <nav className={`navbar navbar-${theme} bg-${theme} fixed-bottom bottom-nav d-md-none d-flex justify-content-around`} style={{ height: '6vh' }}>
       <Link to={""} className="text-decoration-none nav-link text-light">

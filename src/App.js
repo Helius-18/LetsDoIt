@@ -1,21 +1,25 @@
 // App.js
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Post from './components/Posts/Post';
 import axios from 'axios';
 import config from './appSettings.json'
 import { apiRoutes } from './apiRoutes';
+import { AppContext } from './AppContext';
 
-const App = ({ theme }) => {
+const App = () => {
+  const { setLoading } = useContext(AppContext);
 
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
     try {
+      setLoading(true);
       const response = await axios.get(`${config.apiUrl}${apiRoutes.getPosts}`)
       setPosts(response.data);
     } catch (error) {
       console.log('Error loading Posts', error);
     }
+    setLoading(false);
   }
 
   useEffect(() => {

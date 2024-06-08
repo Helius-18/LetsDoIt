@@ -1,9 +1,12 @@
 // Messages.js
-import React from 'react';
+import React, { useContext } from 'react';
 import MessageList from './MessageList';
 import MessageSpace from './MessageSpace';
+import { AppContext } from '../../AppContext';
 
-const Messages = ({ theme }) => {
+const Messages = () => {
+    const { theme} = useContext(AppContext);
+    
     return (
         <div className='d-flex'>
             <MessageList theme={theme}/>
