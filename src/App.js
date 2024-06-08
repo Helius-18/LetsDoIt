@@ -1,6 +1,6 @@
 // App.js
 import React, { useEffect, useState } from 'react';
-import Post from './components/Post';
+import Post from './components/Posts/Post';
 import axios from 'axios';
 import config from './appSettings.json'
 import { apiRoutes } from './apiRoutes';

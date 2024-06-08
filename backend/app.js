@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const postRoutes = require('./routes/postRoutes');
+const authRoutes = require('./routes/authRoutes')
 const cors = require('cors');
 
 dotenv.config();
@@ -11,7 +12,8 @@ app.use(express.json());
 
 app.use(cors())
 
-app.use('/api', postRoutes);
+app.use('/api/post', postRoutes);
+app.use('/api/auth', authRoutes);
 
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,

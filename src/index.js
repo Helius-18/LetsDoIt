@@ -7,13 +7,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App';
-import Login from './components/Login';
-import Messages from './components/Messages';
-import Sidebar from './components/Sidebar';
-import MessageList from './components/MessageList';
-import MessageSpace from './components/MessageSpace';
-import Settings from './components/Settings';
-import Account from './components/Account';
+import Login from './components/Login/Login';
+import Messages from './components/Messages/Messages';
+import Sidebar from './components/Navbar/Sidebar';
+import MessageList from './components/Messages/MessageList';
+import MessageSpace from './components/Messages/MessageSpace';
+import Settings from './components/Settings/Settings';
+import Account from './components/Account/Account';
 
 const theme = 'dark';
 

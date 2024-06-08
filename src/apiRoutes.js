@@ -1,5 +1,5 @@
 export const apiRoutes = {
     // Post Endpoints
-    "getPosts" : "/get-posts",
-    "createPost" : "/create-post"
+    "getPosts" : "/post/get-posts",
+    "createPost" : "/post/create-post"
 }
